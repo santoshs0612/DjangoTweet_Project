@@ -56,6 +56,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': ['./templates',],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -128,3 +129,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+
+LOGIN_URL = "/accounts/login"
+# LOGOUT_URL = "/accounts/logout"
+
+LOGIN_REDIRECT_URL = "/tweet/"
+LOGOUT_REDIRECT_URL = "/tweet/"
