@@ -60,4 +60,4 @@ def register(request):
     else:
         form = UserRegistationForm()
         
-    return render(request,'registrations/register.html',{"form":form})
+    return render(request,'registration/register.html',{"form":form})
